@@ -1,10 +1,9 @@
 <img src="../.assets/christmas_ferris.png" width="150px"/>
 
-# Advent of Code
+# year 2015
 
-the repository is a workspace containing solutions to AoC challenges in rust. 
-It aims at aiding anyone stuck with a problem or curious about alternative solutions.
+solutions to year 2015. need to explain more.
 
-currently a work in progress
 
-PRs are encouraged
+### TODO 
++ day 6 taking 1.4s, need to cut down. PRs welcome
