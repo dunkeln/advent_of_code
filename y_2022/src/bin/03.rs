@@ -1,13 +1,10 @@
 use aoc_core::read_file;
-use std::collections::HashSet;
 
 fn main() -> Result<(), std::io::Error> {
     let data = read_file(03).unwrap();
     let mut sols = (0, 0);
 
     let data: Vec<&[u8]> = data.lines().map(str::as_bytes).collect();
-
-    let mut hash_set: HashSet<u8> = HashSet::new();
 
     sols.0 = data.iter().fold(0, |acc, line| {
         let mut common = 0;
@@ -37,22 +34,28 @@ fn main() -> Result<(), std::io::Error> {
         .chunks(3)
         .map(|chunk| {
             let mut temp = vec![];
-            for i in chunk[0].iter() {
-                for j in chunk[1].iter() {
-                    if i == j {
-                        temp.push(i);
-                    }
+            chunk[0]
+                .iter()
+                .for_each(|x| {
+                    chunk[1]
+                        .iter()
+                        .for_each(|y| {
+                            if y == x {
+                                temp.push(y);
+                            }
+                        })
+                });
+            let mut ret = 0;
+            temp.iter().for_each(|&x| {
+                if chunk[2].iter().any(|y| y == x) {
+                    ret = *x;
                 }
-            }
-
-            for i in temp.iter() {
-                for j in chunk[2].iter() {
-                    if *i == j  {
-                        return **i as u64;
-                    }
-                }
-            }
-            0
+            });
+            (match ret {
+                97..=122 => ret + 1 - 97,
+                65..=90 => ret + 27 - 65,
+                _ => panic!(),
+            }) as u64
         })
         .sum();
 
