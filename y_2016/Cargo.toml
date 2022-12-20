@@ -1,19 +1,9 @@
 [package]
-name = "advent_of_code"
+name = "y_2016"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-
-
-[workspace]
-members = [ 
-    "y_2015",
-    "y_2016",
-    "y_2022",
-    "aoc_core"
-]
-
-rustc-channel = "nightly"
+aoc_core = { path = "../aoc_core" }

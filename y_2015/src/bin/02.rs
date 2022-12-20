@@ -1,4 +1,4 @@
-use ::y_2015::read_file;
+use aoc_core::read_file;
 
 fn refine_data(data: &str) -> Vec<(u64, u64, u64)> {
     data.lines()

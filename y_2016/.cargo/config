@@ -1,0 +1,4 @@
+[alias]
+
+day = "run --bin "
+all = "run --release"

@@ -2,7 +2,9 @@
 
 # year 2015
 
+**challenge** all of year 2015 takes < 1s written idiomatic rust
 solutions to year 2015. need to explain more.
+
 
 
 ### TODO 

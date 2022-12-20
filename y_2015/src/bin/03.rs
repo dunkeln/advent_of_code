@@ -1,4 +1,4 @@
-use ::y_2015::read_file;
+use aoc_core::read_file;
 use std::collections::HashSet;
 
 

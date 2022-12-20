@@ -1,6 +1,5 @@
-use crypto::digest::Digest;
+use aoc_core::read_file;
 
 fn main() -> Result<(), std::io::Error> {
-    println!("{}", 6_u8);
     Ok(())
 }
