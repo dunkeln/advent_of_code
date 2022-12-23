@@ -13,6 +13,4 @@ harness = false
 
 [dependencies]
 aoc_core = { path = "../aoc_core" }
-
-[profile.dev]
-rustc-channel = "nightly"
+regex = "1.7.0"
